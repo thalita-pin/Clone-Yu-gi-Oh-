@@ -27,21 +27,15 @@ body {
     border-radius: 10px;
     gap: 5px;
     position: absolute;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: translateX(100%); /* Move para a direita inicialmente */
+    will-change: opacity, z-index;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
 }
 
 .cartao.selecionado {
     opacity: 1;
     z-index: 1;
-    transform: translateX(0); /* Traz o cartão para o centro */
 }
-
-.cartao.saindo {
-    opacity: 0;
-    transform: translateX(-100%); /* Move para a esquerda ao sair */
-}
-
 
 .lista-personagens {
     width: 300px;
